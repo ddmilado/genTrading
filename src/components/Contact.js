@@ -4,6 +4,7 @@ import { Container, Row, Col } from "react-bootstrap";
 import contactImg from "../assets/img/contact-img.png";
 import 'animate.css';
 import TrackVisibility from 'react-on-screen';
+import { supabase } from "../Helper";
 
 export const Contact = () => {
   const formInitialDetails = {
@@ -24,25 +25,24 @@ export const Contact = () => {
       })
   }
 
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    setButtonText("Sending...");
-    let response = await fetch("http://192.168.2.103:8080/contact", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json;charset=utf-8",
-      },
-      body: JSON.stringify(formDetails),
-    });
-    setButtonText("Send");
-    let result = await response.json();
-    setFormDetails(formInitialDetails);
-    if (result.code === 200) {
-      setStatus({ success: true, message: 'Message sent successfully', color: "black"});
-    } else {
-      setStatus({ success: false, message: 'Something went wrong, please try again later.', color: "red"});
-    }
-  };
+ const handleSubmit = async (e) => {
+  e.preventDefault();
+  setButtonText("Sending...");
+
+  const { data, error } = await supabase
+    .from('ContactSubmissions')
+    .insert(formDetails);
+
+  setButtonText("Send");
+
+  if (error) {
+    setStatus({ success: false, message: 'Something went wrong, please try again later.', color: "red"});
+    return;
+  }
+
+  setStatus({ success: true, message: 'Message sent successfully', color: "black"});
+  setFormDetails(formInitialDetails);
+};
 
   return (
     <section className="contact" id="connect">
