@@ -40,7 +40,7 @@ export const Contact = () => {
     return;
   }
 
-  setStatus({ success: true, message: 'Message sent successfully', color: "black"});
+  setStatus({ success: true, message: 'Message sent successfully', color: "white"});
   setFormDetails(formInitialDetails);
 };
 
