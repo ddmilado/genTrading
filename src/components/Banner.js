@@ -12,7 +12,7 @@ export const Banner = () => {
   const [text, setText] = useState('');
   const [delta, setDelta] = useState(300 - Math.random() * 100);
   const [index, setIndex] = useState(1);
-  const toRotate = [ "Building Cleaning", "Cargo Services", "Transportation" ];
+  const toRotate = ["Cargo Services", "Travels & Tours", "Cleaning Servces", "Airport Pick-Up & Drop", "Chattered Transportation(All Destinations)", "Poultry Farming" ];
   const period = 2000;
 
   useEffect(() => {
@@ -52,13 +52,13 @@ export const Banner = () => {
     <section className="banner" id="home">
       <Container>
         <Row className="aligh-items-center">
-          <Col xs={12} md={6} xl={7} style={{ marginTop: '4px' }}>
+          <Col xs={12} md={6} xl={7} style={{ marginTop: '1px' }}>
             <TrackVisibility>
               {({ isVisible }) =>
               <div className={isVisible ? "animate__animated animate__fadeIn" : ""}>
-                <span className="tagline">Welcome to Al Ghadeer Services</span>
-                <h1>{`Our Services includes `} <span className="txt-rotate" dataPeriod="1000" data-rotate='[ "Building Cleaning", "Cargo Services", "Transportation Services"]'><span className="wrap">{text}</span></span></h1>
-                  <p>Al Ghadeer Services is your trusted partner for building cleaning and logistics services. With years of experience and a commitment to excellence, we provide reliable and high-quality services for commercial and residential clients alike. Our team of skilled professionals is dedicated to ensuring that your space is clean, organized, and safe. From routine cleaning and maintenance to specialized services like inventory management and transportation, we have the expertise and resources to meet your needs. Contact us today to learn how we can help you achieve a cleaner, more efficient space.</p>
+                <span className="tagline">Welcome to HemJay Integrated Services</span>
+                <h1>{`Our Services includes `} <span className="txt-rotate" dataPeriod="1000" data-rotate='["Cargo Services", "Travel & Tours", "Airport Pick-Up & Drop", "Poultry Farming" ]'><span className="wrap">{text}</span></span></h1>
+                  <p>We provide a wide range of services tailored to meet your needs. Whether you're in search of efficient cargo solutions, exciting travel experiences, reliable airport transportation, or exploring the world of poultry farming, we have you covered.</p>
                   <button onClick={() => console.log('#connect')}>Connect with Us <ArrowRightCircle size={25} /></button>
               </div>}
             </TrackVisibility>

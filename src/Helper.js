@@ -3,8 +3,8 @@ import { createClient } from '@supabase/supabase-js';
 
 
 export const supabase = createClient(
-  "https://dareicwxvjvsssygchbl.supabase.co",
-  "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImRhcmVpY3d4dmp2c3NzeWdjaGJsIiwicm9sZSI6ImFub24iLCJpYXQiOjE2ODA5OTgxMjYsImV4cCI6MTk5NjU3NDEyNn0.AckClVxeuCXAaJCv2TSGgcikblZzxW9PZgSf3paWbcs", {
+  "https://thyfxprwjdssceekxlfn.supabase.co",
+  "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InRoeWZ4cHJ3amRzc2NlZWt4bGZuIiwicm9sZSI6ImFub24iLCJpYXQiOjE2ODMyOTc4NTUsImV4cCI6MTk5ODg3Mzg1NX0.gQfPvXe-wXs2DMW_U2Cj205JPurXXnRwjnp1kckk-Yg", {
   auth: {
     autoRefreshToken: true,
     persistSession: true,

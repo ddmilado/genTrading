@@ -46,14 +46,14 @@ export const NavBar = () => {
           </Navbar.Toggle>
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="ms-auto">
-              <Nav.Link href="#home" className={activeLink === 'home' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('home')}>Home</Nav.Link>
+              {/* <Nav.Link href="#home" className={activeLink === 'home' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('home')}>Home</Nav.Link>
               <Nav.Link href="#skills" className={activeLink === 'skills' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('skills')}>Services</Nav.Link>
-              <Nav.Link href="#project" className={activeLink === 'projects' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('project')}>Showcase</Nav.Link>
+              <Nav.Link href="#project" className={activeLink === 'projects' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('project')}>Showcase</Nav.Link> */}
             </Nav>
             <span className="navbar-text">
               <div className="social-icon">
-                <a href="https://www.linkedin.com"><img src={navIcon1} alt="" /></a>
-                <a href="https://www.twitter.com"><img src={navIcon2} alt="" /></a>
+                {/* <a href="https://www.linkedin.com"><img src={navIcon1} alt="" /></a> */}
+                {/* <a href="https://www.twitter.com"><img src={navIcon2} alt="" /></a> */}
                 <a href="https://www.facebook.com"><img src={navIcon3} alt="" /></a>
                 <a href="https://www.instagram.com"><img src={navIcon4} alt="" /></a>
               </div>

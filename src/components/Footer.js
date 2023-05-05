@@ -18,8 +18,8 @@ export const Footer = () => {
           </Col>
           <Col size={12} sm={6} className="text-center text-sm-end">
             <div className="social-icon">
-               <a href="https://www.linkedin.com"><img src={navIcon1} alt="" /></a>
-                <a href="https://www.twitter.com"><img src={navIcon2} alt="" /></a>
+               {/* <a href="https://www.linkedin.com"><img src={navIcon1} alt="" /></a>
+                <a href="https://www.twitter.com"><img src={navIcon2} alt="" /></a> */}
                 <a href="https://www.facebook.com"><img src={navIcon3} alt="" /></a>
                 <a href="https://www.instagram.com"><img src={navIcon4} alt="" /></a>
             </div>
